@@ -70,6 +70,62 @@ sealed trait Options[+A] { self =>
   )(implicit ev: A <:< (B, C, D, E, F, G)): Options[Z] =
     self.map(ev).map { case (b, c, d, e, f, g) => f0(b, c, d, e, f, g) }
 
+  final def as[B, C, D, E, F, G, H, Z](
+    f0: (B, C, D, E, F, G, H) => Z
+  )(implicit ev: A <:< (B, C, D, E, F, G, H)): Options[Z] =
+    self.map(ev).map { case (b, c, d, e, f, g, h) => f0(b, c, d, e, f, g, h) }
+
+  final def as[B, C, D, E, F, G, H, I, Z](
+    f0: (B, C, D, E, F, G, H, I) => Z
+  )(implicit ev: A <:< (B, C, D, E, F, G, H, I)): Options[Z] =
+    self.map(ev).map { case (b, c, d, e, f, g, h, i) => f0(b, c, d, e, f, g, h, i) }
+
+  final def as[B, C, D, E, F, G, H, I, J, Z](
+    f0: (B, C, D, E, F, G, H, I, J) => Z
+  )(implicit ev: A <:< (B, C, D, E, F, G, H, I, J)): Options[Z] =
+    self.map(ev).map { case (b, c, d, e, f, g, h, i, j) => f0(b, c, d, e, f, g, h, i, j) }
+
+  final def as[B, C, D, E, F, G, H, I, J, K, Z](
+    f0: (B, C, D, E, F, G, H, I, J, K) => Z
+  )(implicit ev: A <:< (B, C, D, E, F, G, H, I, J, K)): Options[Z] =
+    self.map(ev).map { case (b, c, d, e, f, g, h, i, j, k) => f0(b, c, d, e, f, g, h, i, j, k) }
+
+  final def as[B, C, D, E, F, G, H, I, J, K, L, Z](
+    f0: (B, C, D, E, F, G, H, I, J, K, L) => Z
+  )(implicit ev: A <:< (B, C, D, E, F, G, H, I, J, K, L)): Options[Z] =
+    self.map(ev).map { case (b, c, d, e, f, g, h, i, j, k, l) => f0(b, c, d, e, f, g, h, i, j, k, l) }
+
+  final def as[B, C, D, E, F, G, H, I, J, K, L, M, Z](
+    f0: (B, C, D, E, F, G, H, I, J, K, L, M) => Z
+  )(implicit ev: A <:< (B, C, D, E, F, G, H, I, J, K, L, M)): Options[Z] =
+    self.map(ev).map { case (b, c, d, e, f, g, h, i, j, k, l, m) => f0(b, c, d, e, f, g, h, i, j, k, l, m) }
+
+
+  final def as[B, C, D, E, F, G, H, I, J, K, L, M, N, Z](
+    f0: (B, C, D, E, F, G, H, I, J, K, L, M, N) => Z
+  )(implicit ev: A <:< (B, C, D, E, F, G, H, I, J, K, L, M, N)): Options[Z] =
+    self.map(ev).map { case (b, c, d, e, f, g, h, i, j, k, l, m, n) => f0(b, c, d, e, f, g, h, i, j, k, l, m, n) }
+
+  final def as[B, C, D, E, F, G, H, I, J, K, L, M, N, O, Z](
+    f0: (B, C, D, E, F, G, H, I, J, K, L, M, N, O) => Z
+  )(implicit ev: A <:< (B, C, D, E, F, G, H, I, J, K, L, M, N, O)): Options[Z] =
+    self.map(ev).map { case (b, c, d, e, f, g, h, i, j, k, l, m, n, o) => f0(b, c, d, e, f, g, h, i, j, k, l, m, n, o) }
+
+  final def as[B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Z](
+    f0: (B, C, D, E, F, G, H, I, J, K, L, M, N, O, P) => Z
+  )(implicit ev: A <:< (B, C, D, E, F, G, H, I, J, K, L, M, N, O, P)): Options[Z] =
+    self.map(ev).map { case (b, c, d, e, f, g, h, i, j, k, l, m, n, o, p) => f0(b, c, d, e, f, g, h, i, j, k, l, m, n, o, p) }
+
+  final def as[B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, Z](
+    f0: (B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q) => Z
+  )(implicit ev: A <:< (B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q)): Options[Z] =
+    self.map(ev).map { case (b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q) => f0(b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q) }
+
+  final def as[B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, Z](
+    f0: (B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R) => Z
+  )(implicit ev: A <:< (B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R)): Options[Z] =
+    self.map(ev).map { case (b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r) => f0(b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r) }
+
   final def fold[B, C, Z](
     f1: B => Z,
     f2: C => Z
